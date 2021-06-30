@@ -58,6 +58,11 @@
       */
 
       const addParagraph = function (content) {
+          let newParagraf = document.createElement('p')
+          newParagraf.innerHTML= "<p>this is newly added paragraf.</p>"
+          
+          let addP = document.querySelectorAll("div")
+          addP[0].appendChild(newParagraf)
         //
       };
 
@@ -66,7 +71,7 @@
       */
 
       const firstUlDisappear = function () {
-        //
+        
       };
 
       /* EXERCISE 8
@@ -74,6 +79,8 @@
       */
 
       const paintItGreen = function () {
+         document.getElementById("secondList").style.background = "green"
+        
         //
       };
 
@@ -82,16 +89,31 @@
       */
 
       const makeItClickable = function () {
-        //
+          let h1 = document.querySelector('h1')
+          let  randomColor = Math.floor(Math.random()*16777215).toString(16)
+          h1.style.color = randomColor
+          document.querySelector('h1').addEventListener("click" , makeItClickable)
+          
+
       };
 
+      
+  
       /* EXERCISE 10
       Change the footer text with something else when the user clicks on it.
       */
 
       const changeFooterText = function () {
-        //
-      };
+          let newFooterText = document.querySelector("footer p")
+          
+          newFooterText.innerText = "Text is changed";
+          //document.querySelector("footer p").addEventListener("click" , newFooterText)
+          newFooterText.addEventListener("click", changeFooterText)
+      }
+      
+
+      
+      
 
       /* EXERCISE 11
       Attach an event listener to the input field in the page for console logging its value just after any keystroke.
@@ -105,6 +127,7 @@
       */
 
       window.onload = function () {
+        alert("welcome to Strive School");
         //
       };
 
